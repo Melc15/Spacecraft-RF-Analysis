@@ -1,0 +1,8 @@
+﻿Requirement ID,Requirement,Verification Method,Test File,Test Function,Expected Result,Status
+RF-VER-001,Calculate Eb/N0 correctly for a known input,Unit test,test_verification.py,test_calculate_eb_n0_at_160_bps,Calculated value matches expected result,Implemented
+RF-VER-002,Confirm Eb/N0 decreases when data rate increases at fixed C/N0,Unit test,test_verification.py,test_calculate_eb_n0_decreases_as_data_rate_increases,Higher data rate produces lower Eb/N0,Implemented
+RF-VER-003,Pass when calculated link margin is positive,Unit test,test_verification.py,test_link_passes_when_margin_is_positive,Verification returns PASS,Implemented
+RF-VER-004,Fail when calculated link margin is negative,Unit test,test_verification.py,test_link_fails_when_margin_is_negative,Verification returns FAIL,Implemented
+RF-VER-005,Pass when calculated link margin is exactly zero,Boundary-value test,test_verification.py,test_link_passes_when_margin_is_exactly_zero,Verification returns PASS,Implemented
+RF-VER-006,Reject a zero telemetry data rate,Invalid-input test,test_verification.py,test_zero_data_rate_is_rejected,ValueError is raised,Implemented
+RF-VER-007,Reject a negative telemetry data rate,Invalid-input test,test_verification.py,test_negative_data_rate_is_rejected,ValueError is raised,Implemented
